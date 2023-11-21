@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Transfer</title>
+        <script type="text/javascript" src="scripts/Transfer.js"></script>
+    </head>
+    <body onload="renderTransferTable()">
+        <h1>
+            Transfer
+            <!-- HTML5 -->            
+        </h1>
+        <p>
+            <h2>Create New Transfer</h2>
+            <form id="TransferForm" onsubmit="return createTransfer()">
+                <table border="1" width="100%">
+                    <tbody>
+                        <tr>
+                            <td width="20%"><b>Transfer ID</b></td>
+                            <!-- HTML5 -->
+                            <td width="80%"><input type="text" placeholder="Auto Generate Tranfer ID" required="true" id="Transfer ID" name="Transfer ID" style="width: 300px"/></td>
+                        </tr>
+                        <tr>
+                            <td><b>Transfer From</b></td>
+                            <td>
+                                <!-- HTML5 -->
+                                <td width="80%"><input type="text" placeholder="Enter Your Accout ID" required="true" id="Account ID" name="Account ID" style="width: 300px"/></td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>Transfer To</b></td>
+                            <td>
+                                <!-- HTML5 -->
+                                <td width="80%"><input type="text" placeholder="Enter Counterparty's ID" required="true" id="Account ID" name="Account ID" style="width: 300px"/></td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>DATE</b></td>
+                            <!-- HTML5 -->
+                            <input type="date" id="Bpd" name="Bpd" required="true" min="1990-01-01" max="2023-10-01" />
+                        </tr>
+                        <tr>
+                            <td><b>Amount</b></td>
+                            <!-- HTML5 -->
+                            <td><input type="number" min="0" step="0.01" id="Bprice" name="Bprice" style="width: 100px"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: center;"><input type="reset" value="Clear" /> <input type="submit" value="Create/Update" /></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </p>
+        <hr />
+        <p>
+            <h2>Available Balance</h2>
+            <table id="Available Balance" border="1" width="100%">
+                <thead>
+                    <tr>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </p>
+        <hr />
+        <p>
+            <a href="./index.html">Home</a>
+        </p>
+    </body>
+</html>
