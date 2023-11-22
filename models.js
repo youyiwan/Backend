@@ -98,12 +98,40 @@ const TRANSFER_DETAILS = sequelize.define('TRANSFER_DETAILS', {
     freezeTableName: true
 });
 
+const PAYMENT_DETAILS = sequelize.define('PAYMENT_DETAILS', {
 
-ACCOUNT.hasMany(TRANSFER_DETAILS);        // 1 to M relationship
+    PAYMENT_ID: {
+        type: DataTypes.CHAR(64),
+        primaryKey: true,
+        allowNull: false
+    },
+    PAYER: {
+        type: DataTypes.CHAR(64),
+        allowNull: false
+    },
+    RECEIVER: {
+        type: DataTypes.CHAR(64),
+        allowNull: false
+    },
+    DATE: {
+        type: DataTypes.DATE,
+        allowNull: false
+    },
+    AMOUNT: {
+        type: DataTypes.DECIMAL(10, 2),
+        allowNull: false
+    },
+
+}, {
+    freezeTableName: true
+});
+
+
+ACCOUNT.hasMany(TRANSFER_DETAILS);       // 1 to M relationship
+ACCOUNT.hasMany(PAYMENT_DETAILS)         // 1 to M relationship
 CUSTOMER.belongsTo(ACCOUNT);             // 1 to 1 relationship
-
 
 
 sequelize.sync();
 
-module.exports = { sequelize, CUSTOMER, ACCOUNT, TRANSFER_DETAILS };
+module.exports = { sequelize, CUSTOMER, ACCOUNT, TRANSFER_DETAILS, PAYMENT_DETAILS };

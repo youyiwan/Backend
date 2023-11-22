@@ -14,6 +14,9 @@ app.use(express.json())
 const Transfer = require('./Transfer') ;
 app.use('/Transfer', Transfer);
 
+const Payment = require('./Payment') ;
+app.use('/Payment', Payment);
+
 app.listen(port, function () {
     console.log(`Express app listening on port ${port}!`);
 });
