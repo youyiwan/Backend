@@ -104,6 +104,6 @@ CUSTOMER.belongsTo(ACCOUNT);             // 1 to 1 relationship
 
 
 
-// sequelize.sync();
+sequelize.sync();
 
 module.exports = { sequelize, CUSTOMER, ACCOUNT, TRANSFER_DETAILS };
