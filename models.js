@@ -52,14 +52,6 @@ const ACCOUNT = sequelize.define('ACCOUNT', {
         primaryKey: true,
         allowNull: false
     },
-    DEBIT: {
-        type: DataTypes.DECIMAL(10, 2),
-        allowNull: false
-    },
-    CREDIT: {
-        type: DataTypes.DECIMAL(10, 2),
-        allowNull: false
-    },
     BALANCE: {
         type: DataTypes.DECIMAL(10, 2),
         allowNull: false
@@ -85,12 +77,12 @@ const TRANSFER_DETAILS = sequelize.define('TRANSFER_DETAILS', {
         primaryKey: true,
         allowNull: false
     },
-    DATE: {
-        type: DataTypes.DATE,
-        allowNull: false
-    },
     AMOUNT: {
         type: DataTypes.DECIMAL(10, 2),
+        allowNull: false
+    },
+    DATE: {
+        type: DataTypes.DATE,
         allowNull: false
     },
 
@@ -113,12 +105,12 @@ const PAYMENT_DETAILS = sequelize.define('PAYMENT_DETAILS', {
         type: DataTypes.CHAR(64),
         allowNull: false
     },
-    DATE: {
-        type: DataTypes.DATE,
-        allowNull: false
-    },
     AMOUNT: {
         type: DataTypes.DECIMAL(10, 2),
+        allowNull: false
+    },
+    DATE: {
+        type: DataTypes.DATE,
         allowNull: false
     },
 
