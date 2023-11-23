@@ -6,7 +6,7 @@ const app = express();
 // if running react concurrently
 const port = 3001;
 
-// const dataInit = require('./dataInit');
+const dataInit = require('./dataInit');
 
 app.use(cors())
 app.use(express.json())
